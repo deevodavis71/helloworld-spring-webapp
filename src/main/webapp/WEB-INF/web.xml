@@ -51,11 +51,13 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!-- Spring definitions from here -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
+    <!-- Jersey JAX-RS Servlet Endpoints -->
     <servlet>
         <servlet-name>SpringApplication</servlet-name>
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
@@ -65,6 +67,7 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>SpringApplication</servlet-name>
         <url-pattern>/*</url-pattern>
